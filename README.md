@@ -52,4 +52,4 @@ This problem is unique due to the flexibility it offers regarding the number of 
 * Both implementations generate multiple solutions to the problem
 * Each solution is a list of every instructor and the courses they are assigned to
 * Every solution satisfies the constraints in the problem statement, as interpreted in the project report
-* Solutions are ranked in descending order of the _objective function_ or _metric_ explained in the project report
+* Solutions are ranked in ascending order of _total cost_ and descending order of _metric_ as explained in the project report
