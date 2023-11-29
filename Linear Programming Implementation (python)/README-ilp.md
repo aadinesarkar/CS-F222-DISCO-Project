@@ -73,6 +73,7 @@ Preferences.csv and Courses.csv can be named something else but should be given 
         * data\Preferences\Odd_Sem.csv
         * data\Courses\Odd_sem_courses.csv
     * Additional test cases are given in data and ronit_data folders. The ronit_data folder contains the test cases used for the Hungarian Algorithm approach.
+* Make sure `output.csv` **does not exist** otherwise output will be appended at the bottom.
 * Make a new `.csv` file containing course preferences anywhere you like. Preferably in a new folder.
     * In the first line of the document, a header row IS EXPECTED. Maintain format as given in [Format of Preferences.csv](#format-of-preferencescsv)
     * Each subsequent row contains -- separated by commas in the source file -- the name of an instructor, the maximum course load for an instructor, and the course codes IN ORDER for their preferred FD CDC, HD CDC, FD Elective and HD Elective.
@@ -115,5 +116,9 @@ python driver.py path/to/your/file.csv path/to/your/courses.csv
 * Assignments are displayed in descending order of the total cost, the highest total cost indicating the optimal assignment.
 
 ## Testing
-Refer to pdf document for testing results.
+`sample_output.csv` contains the output for
+```sh
+python driver.py data\toomanyprofs_input.csv data\Odd_sem_courses.csv
+```
+Refer to pdf document for more testing results.
 The current implementation of the program may not work for some edge cases. A fallback program is also given in the `fallback driver` folder. A limitation of the fallback program is that it does not assign CDCs not in the preference list. For e.g. it does not give any solution for emptypreflists_input.csv. You may also have to comment out the optional constraint to get a solution if no solution is given. The SCIP solver implementation is given in `SCIP solver (redundant)`.
